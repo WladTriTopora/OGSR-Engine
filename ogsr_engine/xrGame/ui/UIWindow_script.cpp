@@ -45,6 +45,10 @@ CGameFont* GetFontGraffiti50Russian()
 {return mngr().pFontGraffiti50Russian;}
 CGameFont* GetFontLetterica25()
 {return mngr().pFontLetterica25;}
+CGameFont* GetFontArial21()			// Wlad777 - добавил для вызова в статиках через SetFont(GetFontArial21())
+{return mngr().pFontArial21;}
+CGameFont* GetFontArial14()			// Wlad777 - добавил для вызова в статиках через SetFont(GetFontArial14())
+{return mngr().pFontArial14;}
 
 
 int GetARGB(u16 a, u16 r, u16 g, u16 b)
@@ -94,6 +98,8 @@ void CUIWindow::script_register(lua_State *L)
 		def("GetFontGraffiti32Russian",	&GetFontGraffiti32Russian),
 		def("GetFontGraffiti50Russian",	&GetFontGraffiti50Russian),
 		def("GetFontLetterica25",		&GetFontLetterica25),
+		def("GetFontArial21", 			&GetFontArial21),			// Wlad777 - добавил для вызова в статиках через SetFont(GetFontArial21())
+		def("GetFontArial14", 			&GetFontArial14),			// Wlad777 - добавил для вызова в статиках через SetFont(GetFontArial14())
 
 		class_<TEX_INFO>("TEX_INFO")
 		.def("get_file_name",	 			&TEX_INFO::get_file_name)
