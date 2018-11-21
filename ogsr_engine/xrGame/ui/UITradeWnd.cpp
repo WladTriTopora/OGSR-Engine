@@ -544,16 +544,16 @@ void CUITradeWnd::UpdatePrices()
 
 
 	string256				buf;
-	sprintf_s					(buf, "%d RU", m_iOurTradePrice);
+	sprintf_s					(buf, "%d RUB", m_iOurTradePrice);		// Wlad777 - косметическая правка, правильное обозначение валюты
 	m_uidata->UIOurPriceCaption.GetPhraseByIndex(2)->str = buf;
-	sprintf_s					(buf, "%d RU", m_iOthersTradePrice);
+	sprintf_s					(buf, "%d RUB", m_iOthersTradePrice);	// Wlad777 - косметическая правка, правильное обозначение валюты
 	m_uidata->UIOthersPriceCaption.GetPhraseByIndex(2)->str = buf;
 
-	sprintf_s					(buf, "%d RU", m_pInvOwner->get_money());
+	sprintf_s					(buf, "%d RUB", m_pInvOwner->get_money());		// Wlad777 - косметическая правка, правильное обозначение валюты
 	m_uidata->UIOurMoneyStatic.SetText(buf);
 
 	if(!m_pOthersInvOwner->InfinitiveMoney()){
-		sprintf_s					(buf, "%d RU", m_pOthersInvOwner->get_money());
+		sprintf_s					(buf, "%d RUB", m_pOthersInvOwner->get_money());		// Wlad777 - косметическая правка, правильное обозначение валюты
 		m_uidata->UIOtherMoneyStatic.SetText(buf);
 	}else
 	{
@@ -770,7 +770,7 @@ void CUITradeWnd::SetCurrentItem(CUICellItem* itm)
 
 		string256			str;
 
-		sprintf_s				(str, "%d RU", m_pOthersTrade->GetItemPrice(CurrentIItem(), bBuying) );
+		sprintf_s				(str, "%d RUB", m_pOthersTrade->GetItemPrice(CurrentIItem(), bBuying) );		// Wlad777 - косметическая правка, правильное обозначение валюты
 		m_uidata->UIItemInfo.UICost->SetText (str);
 	}
 

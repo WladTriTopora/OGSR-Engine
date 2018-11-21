@@ -292,7 +292,7 @@ void CUIInventoryWnd::Update()
 
 		// update money
 		string64						sMoney;
-		sprintf_s							(sMoney,"%d RU", _money);
+		sprintf_s							(sMoney,"%d RUB", _money);		// Wlad777 - косметическая правка, правильное обозначение валюты
 		UIMoneyWnd.SetText				(sMoney);
 
 		if (m_b_need_update_stats)

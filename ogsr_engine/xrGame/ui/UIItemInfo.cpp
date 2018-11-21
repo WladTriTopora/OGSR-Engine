@@ -150,7 +150,7 @@ void CUIItemInfo::InitItem(CInventoryItem* pInvItem)
 	}
 	if( UICost )
 	{
-		sprintf_s				(str, "%d RU", pInvItem->Cost());		// will be owerwritten in multiplayer
+		sprintf_s				(str, "%d RUB", pInvItem->Cost());		// Wlad777 - косметическая правка, правильное обозначение валюты // will be owerwritten in multiplayer
 		UICost->SetText		(str);
 	}
 
